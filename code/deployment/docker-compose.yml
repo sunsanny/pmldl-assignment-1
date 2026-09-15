@@ -1,0 +1,24 @@
+services:
+  api:
+    build:
+      context: ./api
+    container_name: atp_api
+    ports:
+      - "8000:8000"
+    volumes:
+      # The model is mounted, not baked into the image: the pipeline can
+      # retrain it every 5 minutes without rebuilding the container.
+      - ../../models:/app/models:ro
+    environment:
+      - MODEL_PATH=/app/models/model.pkl
+
+  app:
+    build:
+      context: ./app
+    container_name: atp_app
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://api:8000
+    depends_on:
+      - api

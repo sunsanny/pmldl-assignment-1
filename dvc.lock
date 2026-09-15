@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  prepare_data:
+    cmd: python code/datasets/prepare_data.py
+    deps:
+    - path: code/datasets/prepare_data.py
+      hash: md5
+      md5: 2baafc6c4c0f508d34614b35bdc525d8
+      size: 4693
+    - path: data/raw/atp_tennis.csv
+      hash: md5
+      md5: 3a48520a688a9dfdc7f879244d6c3b51
+      size: 9135359
+    outs:
+    - path: data/processed/test.csv
+      hash: md5
+      md5: d9573756ac503629cab482fcb9de725a
+      size: 625949
+    - path: data/processed/train.csv
+      hash: md5
+      md5: b930a5ce3cf6d6dca7d0ace5d107706e
+      size: 2508773

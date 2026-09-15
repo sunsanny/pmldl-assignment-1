@@ -1,0 +1,9 @@
+stages:
+  prepare_data:
+    cmd: python code/datasets/prepare_data.py
+    deps:
+    - code/datasets/prepare_data.py
+    - data/raw/atp_tennis.csv
+    outs:
+    - data/processed/test.csv
+    - data/processed/train.csv

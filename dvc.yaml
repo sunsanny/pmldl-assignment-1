@@ -7,3 +7,14 @@ stages:
     outs:
     - data/processed/test.csv
     - data/processed/train.csv
+  train_model:
+    cmd: python code/models/train_model.py
+    deps:
+    - code/models/train_model.py
+    - data/processed/test.csv
+    - data/processed/train.csv
+    outs:
+    - models/model.pkl
+    metrics:
+    - metrics.json:
+        cache: false

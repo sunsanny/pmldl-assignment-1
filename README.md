@@ -8,7 +8,7 @@ Binary classification: given two players (ATP ranks and points) and the match
 conditions (surface, court, tournament series, round, best-of format), predict
 whether Player 1 wins.
 
-- **Dataset:** [ATP Tennis 2000-2023](https://www.kaggle.com/datasets/dissfya/atp-tennis-2000-2023daily-pull), filtered to matches from 2015 onwards
+- **Dataset:** [ATP Tennis 2000-2026](https://www.kaggle.com/datasets/dissfya/atp-tennis-2000-2023daily-pull), filtered to matches from 2015 onwards
 - **Model:** RandomForestClassifier — test accuracy 0.63, ROC-AUC 0.69
 
 ## Pipeline

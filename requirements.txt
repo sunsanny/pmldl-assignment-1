@@ -7,4 +7,5 @@ joblib
 fastapi
 uvicorn
 streamlit
-requestsmlflow
+requests
+mlflow
